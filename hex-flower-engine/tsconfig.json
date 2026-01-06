@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "ESNext",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "moduleResolution": "bundler",
+        "esModuleInterop": true,
+        "strict": true,
+        "noImplicitAny": false,
+        "outDir": "dist",
+        "types": [
+            "vite/client",
+            "@foundryvtt/foundry-vtt-types"
+        ],
+        "allowJs": true,
+        "checkJs": false
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.js"
+    ]
+}

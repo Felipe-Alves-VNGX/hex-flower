@@ -1,0 +1,44 @@
+{
+    "id": "hex-flower-engine",
+    "title": "Hex Flower Engine",
+    "description": "A flexible, generic Hex Flower engine for creating, managing, and navigating Hex Flowers (weather, foreshadowing, etc).",
+    "version": "#{VERSION}#",
+    "compatibility": {
+        "minimum": "10",
+        "verified": "11"
+    },
+    "authors": [
+        {
+            "name": "Felipe Alves",
+            "email": "",
+            "url": ""
+        }
+    ],
+    "esmodules": [
+        "dist/hex-flower-engine.js"
+    ],
+    "styles": [
+        "dist/styles/module.css"
+    ],
+    "packs": [
+        {
+            "name": "macros",
+            "label": "Hex Flower Macros",
+            "path": "packs/macros",
+            "type": "Macro",
+            "system": "dnd5e",
+            "module": "hex-flower-engine"
+        },
+        {
+            "name": "journal",
+            "label": "Hex Flower Journal",
+            "path": "packs/journal",
+            "type": "JournalEntry",
+            "system": "dnd5e",
+            "module": "hex-flower-engine"
+        }
+    ],
+    "url": "#{URL}#",
+    "manifest": "#{MANIFEST}#",
+    "download": "#{DOWNLOAD}#"
+}

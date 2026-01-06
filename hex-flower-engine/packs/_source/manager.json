@@ -1,0 +1,8 @@
+{
+    "name": "Hex Flower Manager",
+    "type": "script",
+    "scope": "global",
+    "command": "const api = game.modules.get('hex-flower-engine')?.api;\nif (api) {\n    api.showManager();\n} else {\n    ui.notifications.error('Hex Flower Engine module is not active.');\n}",
+    "img": "icons/svg/dice-target.svg",
+    "flags": {}
+}

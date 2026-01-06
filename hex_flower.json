@@ -1,0 +1,726 @@
+{
+  "schema": {
+    "coords": "cube",
+    "radius": 3,
+    "tags_normalizados": {
+      "temperatura": {
+        "nivel_min": 1,
+        "nivel_max": 7,
+        "escala": {
+          "1": "polar",
+          "2": "fria",
+          "3": "fresca",
+          "4": "amena",
+          "5": "morna",
+          "6": "quente",
+          "7": "tropical"
+        },
+        "regra_marinha_profunda": "profundo/abissal/fossa_abissal => temperatura padrão 'fria' (nivel=2), exceto biomas marcados como hidrotermais/anômalos"
+      },
+      "hidro": {
+        "nivel_min": 1,
+        "nivel_max": 5,
+        "escala_terrestre": {
+          "1": "árida",
+          "2": "seca",
+          "3": "moderada",
+          "4": "úmida",
+          "5": "encharcada"
+        },
+        "escala_marinha": {
+          "1": "oligotrófica",
+          "2": "baixa",
+          "3": "média",
+          "4": "alta",
+          "5": "eutrófica"
+        }
+      },
+      "altitude_relativa": {
+        "escala": [
+          "alpina",
+          "montanhosa",
+          "terrestre",
+          "costeira",
+          "nerítica",
+          "profundo",
+          "abissal",
+          "fossa_abissal"
+        ]
+      }
+    }
+  },
+  "cells": [
+    {
+      "coord": { "q": -1, "r": -2, "s": 3 },
+      "bioma": "Campo de Cinzas Vulcânicas",
+      "emoji": "🌋",
+      "color": "#6B4F3F",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 3, "banda": "fresca" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": -2, "r": -2, "s": 4 },
+      "bioma": "Agulhas Glaciais",
+      "emoji": "🧊",
+      "color": "#CFEFFF",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": -2, "r": -1, "s": 3 },
+      "bioma": "Geleira Suspensa",
+      "emoji": "🏔️",
+      "color": "#BFE7FF",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": -3, "r": 0, "s": 3 },
+      "bioma": "Deserto Polar de Cristais",
+      "emoji": "❄️",
+      "color": "#EAF8FF",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 1, "banda": "polar" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": 0, "r": -3, "s": 3 },
+      "bioma": "Tundra Alpina",
+      "emoji": "🏔️",
+      "color": "#9BB8A8",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 4, "banda": "amena" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+    {
+      "coord": { "q": 1, "r": -3, "s": 2 },
+      "bioma": "Cume de Basalto",
+      "emoji": "⛰️",
+      "color": "#4A4E57",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 5, "banda": "morna" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+
+    {
+      "coord": { "q": -1, "r": -1, "s": 2 },
+      "bioma": "Vales de Montanha",
+      "emoji": "🏞️",
+      "color": "#6FAE7D",
+      "tags": {
+        "altitude": "montanhosa",
+        "temperatura": { "nivel": 3, "banda": "fresca" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": -2, "r": 0, "s": 2 },
+      "bioma": "Floresta de Coníferas",
+      "emoji": "🌲",
+      "color": "#2E6B3F",
+      "tags": {
+        "altitude": "montanhosa",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": -3, "r": 1, "s": 2 },
+      "bioma": "Pedregais Gelados",
+      "emoji": "🪨",
+      "color": "#7E8B97",
+      "tags": {
+        "altitude": "montanhosa",
+        "temperatura": { "nivel": 1, "banda": "polar" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+
+    {
+      "coord": { "q": 0, "r": -2, "s": 2 },
+      "bioma": "Campos Rupestres",
+      "emoji": "🌾",
+      "color": "#8A9B5A",
+      "tags": {
+        "altitude": "montanhosa",
+        "temperatura": { "nivel": 4, "banda": "amena" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": 2, "r": -3, "s": 1 },
+      "bioma": "Escarpas de Chaparral",
+      "emoji": "🌵",
+      "color": "#A38B4A",
+      "tags": {
+        "altitude": "montanhosa",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+
+    {
+      "coord": { "q": -1, "r": 0, "s": 1 },
+      "bioma": "Floresta Temperada",
+      "emoji": "🌳",
+      "color": "#3D8B5A",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 3, "banda": "fresca" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": -2, "r": 1, "s": 1 },
+      "bioma": "Campos Frios",
+      "emoji": "🌿",
+      "color": "#7FB07A",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": -3, "r": 2, "s": 1 },
+      "bioma": "Estepe Fria",
+      "emoji": "🌬️",
+      "color": "#9DB3A6",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 1, "banda": "polar" },
+        "hidro": { "nivel": 5, "banda_terrestre": "encharcada", "banda_marinha": "eutrófica" }
+      }
+    },
+
+    {
+      "coord": { "q": 0, "r": -1, "s": 1 },
+      "bioma": "Floresta Mista",
+      "emoji": "🌲",
+      "color": "#3F7F5B",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 4, "banda": "amena" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": 1, "r": -2, "s": 1 },
+      "bioma": "Bosque Aberto",
+      "emoji": "🌳",
+      "color": "#6E9B5A",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 5, "banda": "morna" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": 2, "r": -3, "s": 1 },
+      "bioma": "Savanas de Ilha",
+      "emoji": "🦒",
+      "color": "#B7A85B",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+
+    {
+      "coord": { "q": 3, "r": -3, "s": 0 },
+      "bioma": "Duna Costeira",
+      "emoji": "🏜️",
+      "color": "#E4C78A",
+      "tags": {
+        "altitude": "costeira",
+        "temperatura": { "nivel": 7, "banda": "tropical" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+    {
+      "coord": { "q": 2, "r": -2, "s": 0 },
+      "bioma": "Praia Arenosa Quente",
+      "emoji": "🏖️",
+      "color": "#F2D6A2",
+      "tags": {
+        "altitude": "costeira",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": 1, "r": -1, "s": 0 },
+      "bioma": "Praia Arenosa",
+      "emoji": "🏝️",
+      "color": "#F6E1B8",
+      "tags": {
+        "altitude": "costeira",
+        "temperatura": { "nivel": 5, "banda": "morna" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": 0, "r": 0, "s": 0 },
+      "bioma": "Plataforma Continental",
+      "emoji": "🌊",
+      "color": "#3C9DD0",
+      "tags": {
+        "altitude": "nerítica",
+        "temperatura": { "nivel": 4, "banda": "amena" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": -1, "r": 1, "s": 0 },
+      "bioma": "Pradaria de Fanerógamas",
+      "emoji": "🌱",
+      "color": "#4DBA8A",
+      "tags": {
+        "altitude": "nerítica",
+        "temperatura": { "nivel": 3, "banda": "fresca" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": -2, "r": 2, "s": 0 },
+      "bioma": "Floresta de Kelp",
+      "emoji": "🌿",
+      "color": "#1E7A55",
+      "tags": {
+        "altitude": "nerítica",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": -3, "r": 3, "s": 0 },
+      "bioma": "Fiorde",
+      "emoji": "🧊",
+      "color": "#2F7FB8",
+      "tags": {
+        "altitude": "costeira",
+        "temperatura": { "nivel": 1, "banda": "polar" },
+        "hidro": { "nivel": 5, "banda_terrestre": "encharcada", "banda_marinha": "eutrófica" }
+      }
+    },
+
+    {
+      "coord": { "q": 3, "r": -2, "s": -1 },
+      "bioma": "Mar Aberto (Oligotrófico)",
+      "emoji": "🌊",
+      "color": "#1C6EA4",
+      "tags": {
+        "altitude": "profundo",
+        "temperatura": { "nivel": 4, "banda": "amena" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+    {
+      "coord": { "q": 2, "r": -1, "s": -1 },
+      "bioma": "Mar Profundo Azul-Escuro",
+      "emoji": "🌌",
+      "color": "#114B7A",
+      "tags": {
+        "altitude": "profundo",
+        "temperatura": { "nivel": 4, "banda": "amena" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": 1, "r": 0, "s": -1 },
+      "bioma": "Talude Continental",
+      "emoji": "⬇️",
+      "color": "#2B6D8F",
+      "tags": {
+        "altitude": "profundo",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": 0, "r": 1, "s": -1 },
+      "bioma": "Zona Mesopelágica",
+      "emoji": "🐟",
+      "color": "#2A5F87",
+      "tags": {
+        "altitude": "profundo",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": -1, "r": 2, "s": -1 },
+      "bioma": "Zona Mesopelágica (Produtiva)",
+      "emoji": "🦑",
+      "color": "#2A5A8E",
+      "tags": {
+        "altitude": "profundo",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": -2, "r": 3, "s": -1 },
+      "bioma": "Mar Profundo Nebuloso",
+      "emoji": "🌫️",
+      "color": "#2E5870",
+      "tags": {
+        "altitude": "profundo",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 5, "banda_terrestre": "encharcada", "banda_marinha": "eutrófica" }
+      }
+    },
+
+    {
+      "coord": { "q": 3, "r": -1, "s": -2 },
+      "bioma": "Planície Abissal",
+      "emoji": "🕳️",
+      "color": "#0F3E63",
+      "tags": {
+        "altitude": "abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": 2, "r": 0, "s": -2 },
+      "bioma": "Campo de Fontes Hidrotermais Abissais",
+      "emoji": "♨️",
+      "color": "#B4482A",
+      "tags": {
+        "altitude": "abissal",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": 1, "r": 1, "s": -2 },
+      "bioma": "Deserto Abissal de Sílica",
+      "emoji": "🪸",
+      "color": "#1D4A6E",
+      "tags": {
+        "altitude": "abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+    {
+      "coord": { "q": 0, "r": 2, "s": -2 },
+      "bioma": "Planície Abissal (Neve Marinha)",
+      "emoji": "✨",
+      "color": "#0E3A5C",
+      "tags": {
+        "altitude": "abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": -1, "r": 3, "s": -2 },
+      "bioma": "Planície Abissal Lamosa",
+      "emoji": "🫧",
+      "color": "#0D3550",
+      "tags": {
+        "altitude": "abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+
+    {
+      "coord": { "q": 3, "r": 0, "s": -3 },
+      "bioma": "Fossa Abissal Sombria",
+      "emoji": "🕳️",
+      "color": "#072B45",
+      "tags": {
+        "altitude": "fossa_abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": 2, "r": 1, "s": -3 },
+      "bioma": "Fossa Abissal Térmica",
+      "emoji": "♨️",
+      "color": "#8E2C1C",
+      "tags": {
+        "altitude": "fossa_abissal",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": 1, "r": 2, "s": -3 },
+      "bioma": "Fossa Abissal de Correntes Frias",
+      "emoji": "🌪️",
+      "color": "#062A40",
+      "tags": {
+        "altitude": "fossa_abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": 0, "r": 3, "s": -3 },
+      "bioma": "Fossa Abissal com Fontes Hidrotermais",
+      "emoji": "🔥",
+      "color": "#A33223",
+      "tags": {
+        "altitude": "fossa_abissal",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 5, "banda_terrestre": "encharcada", "banda_marinha": "eutrófica" }
+      }
+    },
+        {
+      "coord": { "q": -3, "r": -1, "s": 4 },
+      "bioma": "Cume de Granito Ventoso",
+      "emoji": "⛰️",
+      "color": "#7A7F87",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+    {
+      "coord": { "q": -2, "r": -3, "s": 5 },
+      "bioma": "Platô Alpino Congelado",
+      "emoji": "🏔️",
+      "color": "#D6ECF5",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 1, "banda": "polar" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": -1, "r": -3, "s": 4 },
+      "bioma": "Campos Alpinos Floridos",
+      "emoji": "🌸",
+      "color": "#9FBFA6",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 3, "banda": "fresca" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": 1, "r": -4, "s": 3 },
+      "bioma": "Cume Vulcânico Ativo",
+      "emoji": "🌋",
+      "color": "#8C3A2B",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+    {
+      "coord": { "q": 0, "r": -4, "s": 4 },
+      "bioma": "Escarpa Alpina Nebulosa",
+      "emoji": "🌫️",
+      "color": "#8FA3AD",
+      "tags": {
+        "altitude": "alpina",
+        "temperatura": { "nivel": 3, "banda": "fresca" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+
+    {
+      "coord": { "q": -4, "r": 0, "s": 4 },
+      "bioma": "Cordilheira Fraturada",
+      "emoji": "🪨",
+      "color": "#6B6E73",
+      "tags": {
+        "altitude": "montanhosa",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": -4, "r": 1, "s": 3 },
+      "bioma": "Floresta Nublada Fria",
+      "emoji": "🌲",
+      "color": "#4F7A6A",
+      "tags": {
+        "altitude": "montanhosa",
+        "temperatura": { "nivel": 3, "banda": "fresca" },
+        "hidro": { "nivel": 5, "banda_terrestre": "encharcada", "banda_marinha": "eutrófica" }
+      }
+    },
+    {
+      "coord": { "q": 3, "r": -4, "s": 1 },
+      "bioma": "Serra de Arenito Quente",
+      "emoji": "🏜️",
+      "color": "#C9A46B",
+      "tags": {
+        "altitude": "montanhosa",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+
+    {
+      "coord": { "q": -4, "r": 2, "s": 2 },
+      "bioma": "Floresta Boreal Rala",
+      "emoji": "🌲",
+      "color": "#5E8C6A",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": -3, "r": 4, "s": -1 },
+      "bioma": "Pântano Costeiro Frio",
+      "emoji": "🦆",
+      "color": "#3F6B5F",
+      "tags": {
+        "altitude": "costeira",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 5, "banda_terrestre": "encharcada", "banda_marinha": "eutrófica" }
+      }
+    },
+    {
+      "coord": { "q": 4, "r": -3, "s": -1 },
+      "bioma": "Manguezal Tropical",
+      "emoji": "🌴",
+      "color": "#2F7F5F",
+      "tags": {
+        "altitude": "costeira",
+        "temperatura": { "nivel": 7, "banda": "tropical" },
+        "hidro": { "nivel": 5, "banda_terrestre": "encharcada", "banda_marinha": "eutrófica" }
+      }
+    },
+    {
+      "coord": { "q": 4, "r": -2, "s": -2 },
+      "bioma": "Recife de Coral Raso",
+      "emoji": "🪸",
+      "color": "#FF8FB1",
+      "tags": {
+        "altitude": "nerítica",
+        "temperatura": { "nivel": 7, "banda": "tropical" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+
+    {
+      "coord": { "q": 4, "r": -1, "s": -3 },
+      "bioma": "Talude Recifal Profundo",
+      "emoji": "🐠",
+      "color": "#1F6F8B",
+      "tags": {
+        "altitude": "profundo",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 3, "banda_terrestre": "moderada", "banda_marinha": "média" }
+      }
+    },
+    {
+      "coord": { "q": 3, "r": 1, "s": -4 },
+      "bioma": "Planície Abissal Gelada",
+      "emoji": "❄️",
+      "color": "#0B3554",
+      "tags": {
+        "altitude": "abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    },
+    {
+      "coord": { "q": 2, "r": 2, "s": -4 },
+      "bioma": "Campo Abissal de Esponjas",
+      "emoji": "🧽",
+      "color": "#1A4D6F",
+      "tags": {
+        "altitude": "abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": -1, "r": 4, "s": -3 },
+      "bioma": "Fossa Abissal Silenciosa",
+      "emoji": "🕳️",
+      "color": "#061F33",
+      "tags": {
+        "altitude": "fossa_abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+
+    {
+      "coord": { "q": 1, "r": 3, "s": -4 },
+      "bioma": "Fossa Abissal Bioluminescente",
+      "emoji": "✨",
+      "color": "#0A2E4F",
+      "tags": {
+        "altitude": "fossa_abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": 0, "r": 4, "s": -4 },
+      "bioma": "Fossa Abissal Anóxica",
+      "emoji": "☠️",
+      "color": "#041826",
+      "tags": {
+        "altitude": "fossa_abissal",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 1, "banda_terrestre": "árida", "banda_marinha": "oligotrófica" }
+      }
+    },
+    {
+      "coord": { "q": -2, "r": 4, "s": -2 },
+      "bioma": "Mar Profundo Rico em Nutrientes",
+      "emoji": "🐋",
+      "color": "#1E5A7A",
+      "tags": {
+        "altitude": "profundo",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 5, "banda_terrestre": "encharcada", "banda_marinha": "eutrófica" }
+      }
+    },
+    {
+      "coord": { "q": -4, "r": 3, "s": 1 },
+      "bioma": "Taiga Costeira Fria",
+      "emoji": "🌲",
+      "color": "#4A7B65",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 2, "banda": "fria" },
+        "hidro": { "nivel": 4, "banda_terrestre": "úmida", "banda_marinha": "alta" }
+      }
+    },
+    {
+      "coord": { "q": 4, "r": -4, "s": 0 },
+      "bioma": "Ilha Vulcânica Jovem",
+      "emoji": "🌋",
+      "color": "#7F2A1D",
+      "tags": {
+        "altitude": "terrestre",
+        "temperatura": { "nivel": 6, "banda": "quente" },
+        "hidro": { "nivel": 2, "banda_terrestre": "seca", "banda_marinha": "baixa" }
+      }
+    }
+  ]
+}
